@@ -4,101 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T. Daros - Portfolio</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Thiago Darós Fernandes</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        .container {
-            width: 85%;
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>Thiago Darós Fernandes</h2>
+                <p class="tagline">Analog IC Design Engineer | PhD Candidate</p>
+                <p class="current-role">Research Engineer at INL, Braga, Portugal.</p>
+                <div class="profile-links">
+                    <a href="https://github.com/tdaros" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:daros.thiago@gmail.com">Email</a>
+                    </div>
+            </section>
 
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+            <section id="about" class="content-block">
+                 <h2>About Me</h2>
+                 <p>
+                    I am an Analog IC Design Engineer at the International Iberian Nanotechnology Laboratory (INL), specializing in integrated circuits for sensor applications. Concurrently, I am a PhD candidate at the Federal University of Santa Catarina (UFSC), with research on Floating Gate Dosimeters (expected completion: Aug 2025).
+                 </p>
+                 <p>
+                    With a passion for the complete ASIC design cycle—from system modeling to characterization—I enjoy tackling challenges in ultra-low-voltage design and developing innovative microelectronic solutions.
+                 </p>
+            </section>
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: 500;
-        }
+            <section id="skills">
+                <h2>Key Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>IC Design & Methodologies</h3>
+                        <ul>
+                            <li>Analog & Mixed-Signal ASIC Design</li>
+                            <li>Sensor Analog Front-Ends (AFE)</li>
+                            <li>Low-Voltage & Ultra-Low-Voltage</li>
+                            <li>Data Converters (SAR ADC)</li>
+                            <li>Physical Layout & Verification</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>EDA Tools & Technologies</h3>
+                        <ul>
+                            <li>Cadence Suite (Virtuoso, Spectre, Assura)</li>
+                            <li>Synopsys Suite (Custom Compiler, HSPICE)</li>
+                            <li>Siemens Calibre</li>
+                            <li>CMOS (various nodes, incl. 180nm, 22nm FD-SOI)</li>
+                            <li>Verilog-A</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Software & General</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>MATLAB</li>
+                            <li>LATEX</li>
+                            <li>Lab Instrumentation</li>
+                            <li>Research & Problem Solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            margin-top: 0.5rem;
-        }
+            <section id="experience">
+                <h2>Experience Highlights</h2>
+                <div class="content-block">
+                    <h3 class="role-title">Research Engineer</h3>
+                    <p class="company-name">International Iberian Nanotechnology Laboratory (INL), Braga</p>
+                    <p class="date-location">2021 – Present</p>
+                    <ul>
+                        <li>Designing ASICs and sensor Analog Front-Ends (AFEs) in CMOS technologies.</li>
+                        <li>Delivered silicon-proven 12-bit SAR ADC (ENOB >10.4 bits).</li>
+                        <li>Developed ASICs for magnetometers and structural health monitoring.</li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <h3 class="role-title">IC Design Intern / Contractor</h3>
+                    <p class="company-name">Chipus Microelectronics, Florianópolis</p>
+                    <p class="date-location">2020</p>
+                    <ul>
+                        <li>Designed a 12-bit SAR ADC (22nm FD-SOI) for battery fuel gauge applications.</li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <h3 class="role-title">Researcher</h3>
+                    <p class="company-name">Integrated Circuits Laboratory (LCI) - UFSC, Florianópolis</p>
+                    <p class="date-location">2017 – Present (Concurrent with PhD)</p>
+                    <ul>
+                        <li>Focused on analog IC design, layout, and ultra-low voltage circuit research.</li>
+                    </ul>
+                </div>
+            </section>
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+            <section id="education">
+                <h2>Education</h2>
+                 <div class="content-block">
+                    <h3 class="role-title">PhD in Electrical Engineering</h3>
+                    <p class="institution">Federal University of Santa Catarina (UFSC), Brazil <span class="date-location">(Expected August 2025)</span></p>
+                    <p style="font-size:0.9em;">Thesis: "Design, Model and Characterization of a Floating Gate Dosimeter in Standard CMOS Technology."</p>
+                </div>
+                 <div class="content-block">
+                    <h3 class="role-title">MSc in Electrical Engineering</h3>
+                    <p class="institution">Federal University of Santa Catarina (UFSC), Brazil</p>
+                    <p style="font-size:0.9em;">Thesis: "CMOS Amplifiers and Schmitt Triggers for Ultra-Low-Voltage Applications."</p>
+                </div>
+                <div class="content-block">
+                    <h3 class="role-title">BSc in Electronics Engineering</h3>
+                    <p class="institution">Federal University of Santa Catarina (UFSC), Brazil</p>
+                    <p style="font-size:0.9em;">Thesis: "Project Flow Applied to MOS Performance and Reliability: A Case Study Using WiCkeD and RelXpert Tools."</p>
+                </div>
+                <div class="content-block">
+                    <h3 class="role-title">Exchange Program – Master Studies</h3>
+                    <p class="institution">University of Coimbra, Portugal <span class="date-location">(2012-2013)</span></p>
+                </div>
+            </section>
+            
+            <section id="projects" class="content-block"> 
+                <h2>Personal Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Drop 2 Chord Shuffler</h3>
+                        <p>Web app for musicians to practice Drop 2 chord voicings with random generation of roots, qualities, and inversions.</p>
+                        <a href="drop2-chord-shuffler/index.html" class="button">Try the App</a>
+                    </div>
 
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #1abc9c;
-        }
-
-        .hero {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 4rem 1rem;
-            margin-top: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .hero h2 {
-            font-size: 2.8em;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
-        }
-
-        .hero .tagline {
-            font-size: 1.3em;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .profile-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.5em; /* For icon-like links if you use SVGs or font icons */
-            color: #3498db;
-            transition: color 0.3s ease;
-        }
-        .profile-links a:hover {
-            color: #2980b9;
-        }
-        /* Placeholder for actual icons if you add them */
-        .profile-links .icon-github::before { content: "GH"; font-weight: bold; }
-        .profile-links .icon-linkedin::before { content: "LI"; font-weight: bold; }
+                    <div class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>This personal portfolio page, built with HTML & CSS, showcasing my professional profile and projects. Hosted on GitHub Pages.</p>
+                        <a href="https://github.com/tdaros/tdaros.github.io" class="button" target="_blank" rel="noopener noreferrer">View Source</a>
+                    </div>
+                </div>
+            </section>
+             <div class="content-block" style="text-align:center;">
+                <h3>Publications</h3>
+                <p>Authored and co-authored several peer-reviewed publications in IEEE journals and conferences. For a detailed list, please refer to academic search platforms.</p>
+                </div>
 
 
-        #projects {
-            padding: 3rem 0;
-        }
+        </div>
+    </main>
 
-        #projects h2, #about h2 {
-            text-align: center;
-            font-size: 2.2em;
-            margin-bottom: 2.5rem;
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Thiago Darós Fernandes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
