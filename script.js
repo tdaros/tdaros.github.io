@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Smooth scrolling and active link highlighting for navigation
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const headerElement = document.querySelector('header');
-    const headerOffset = headerElement ? headerElement.offsetHeight : 70; // Fallback offset
+    const headerOffset = headerElement ? headerElement.offsetHeight : 70;
 
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -31,30 +29,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Optional: Update active nav link on scroll
     const sections = document.querySelectorAll('section[id]');
 
     function updateActiveLinkOnScroll() {
         let index = sections.length;
 
-        while (--index && window.scrollY + headerOffset * 2 < sections[index].offsetTop) {} // Check a bit below header
+        while (--index && window.scrollY + headerOffset * 2 < sections[index].offsetTop) {}
 
         navLinks.forEach((link) => link.classList.remove('active'));
-        // Ensure the link corresponding to the current section (if any) gets the active class
-        if (index >= 0 && navLinks[index]) { // Check if sections[index] and corresponding navLink exist
+        if (index >= 0 && navLinks[index]) {
             const activeLink = document.querySelector(`nav a[href="#${sections[index].id}"]`);
             if (activeLink) {
                 activeLink.classList.add('active');
             }
-        } else if (window.scrollY < sections[0].offsetTop) { // If above the first section, make first link active
-            const firstLink = document.querySelector('nav a[href="#about"]'); // Assuming 'about' is first
+        } else if (window.scrollY < sections[0].offsetTop) {
+            const firstLink = document.querySelector('nav a[href="#about"]');
             if (firstLink) {
                 firstLink.classList.add('active');
             }
         }
     }
 
-    // Initial call to set active link based on hash or scroll position
     if (window.location.hash) {
         const activeLinkFromHash = document.querySelector(`nav a[href="${window.location.hash}"]`);
         if (activeLinkFromHash) {
@@ -62,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             activeLinkFromHash.classList.add('active');
         }
     } else {
-        updateActiveLinkOnScroll(); // Set initial active link if no hash
+        updateActiveLinkOnScroll();
     }
 
     window.addEventListener('scroll', updateActiveLinkOnScroll);
